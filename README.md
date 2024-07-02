@@ -1,47 +1,46 @@
-# 📊 Previsão de Estoque Inteligente na AWS com [SageMaker Canvas](https://aws.amazon.com/pt/sagemaker/canvas/)
 
-Bem-vindo ao desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas. Neste Lab DIO, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning (ML). Siga os passos abaixo para completar o desafio!
+# SageMaker Canvas
 
-## 📋 Pré-requisitos
-
-Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda para criar sua conta, confira nosso repositório [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
+Escolhi um dataset sobre previsão de eletrônicos de varejo.
 
 
-## 🎯 Objetivos Deste Desafio de Projeto (Lab)
 
-![image](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque/assets/730492/72f5c21f-5562-491e-aa42-2885a3184650)
+## Funcionalidades
 
-- Dê um fork neste projeto e reescreva este `README.md`. Sinta-se à vontade para detalhar todo o processo de criação do seu Modelo de ML para uma "Previsão de Estoque Inteligente".
-- Para isso, siga o [passo a passo] descrito a seguir e evolua as suas habilidades em ML no-code com o Amazon SageMaker Canvas.
-- Ao concluir, envie a URL do seu repositório com a solução na plataforma da DIO.
+A idéia era entender a demanda ao longo de 365 dias.
+O modelo foi bem treinado trazendo os seguintes status:
+
+Avg. wQL0.032
+
+MAPE 0.052
+
+WAPE 0.051
+
+RMSE 100.266
+
+MASE 0.344
 
 
-## 🚀 Passo a Passo
+## Documentação
+Avg. wQL (Weighted Quantile Loss): Essa métrica é usada para avaliar a precisão de previsões quantílicas ponderadas. Um valor mais baixo indica um melhor desempenho.
 
-### 1. Selecionar Dataset
+MAPE (Mean Absolute Percentage Error): Representa o erro absoluto médio em termos percentuais. Um MAPE de 0.052 indica que, em média, os erros de previsão são 5.2% do valor real.
 
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
+WAPE (Weighted Absolute Percentage Error): Similar ao MAPE, mas leva em consideração pesos diferentes para diferentes valores. Um WAPE de 0.051 é bastante baixo, sugerindo boas previsões relativas ao valor real.
 
-### 2. Construir/Treinar
+RMSE (Root Mean Squared Error): O RMSE de 100.266 indica o erro quadrático médio da previsão. É uma métrica que penaliza mais fortemente grandes erros. Um RMSE mais baixo é melhor, mas sua interpretação depende da escala dos dados.
 
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
+MASE (Mean Absolute Scaled Error): Essa métrica compara o erro absoluto médio do modelo com o erro absoluto médio de uma previsão de referência (como a previsão por inércia). Um MASE de 0.344 sugere que o modelo é consideravelmente melhor do que a previsão de referência (valores menores que 1 indicam melhoria sobre a referência).
 
-### 3. Analisar
 
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
 
-### 4. Prever
+## Conclusão
 
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
+Com base nesse status, especialmente com valores baixos de MAPE, WAPE e MASE, o modelo parece estar bem treinado.
 
-## 🤔 Dúvidas?
 
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+
+
+## 🔗 Links
+https://www.linkedin.com/in/rodrigopresidati/
+
